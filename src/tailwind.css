@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.benefit-list {
+  @apply mt-4 space-y-4;
+}
+.benefit-list li {
+  @apply relative pl-8 text-slate-700;
+}
+
+.benefit-list li::before {
+  content: url(../assets/images/icon-list.svg);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+}
+
+.btn-primary {
+  height: 48px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 24px 48px hsla(234, 29%, 20%, 0.2);
+  margin-top: 18px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0 24px 48px hsla(4, 100%, 67%, 0.2);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.error {
+  @apply text-red-500 text-xs;
+}
